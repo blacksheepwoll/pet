@@ -6,27 +6,34 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>894</width>
+    <height>522</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>宠物界面</string>
   </property>
-  <widget class="QProgressBar" name="progressBar">
+  <widget class="QQuickWidget" name="quickWidget">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>110</x>
      <y>60</y>
-     <width>118</width>
-     <height>23</height>
+     <width>471</width>
+     <height>341</height>
     </rect>
    </property>
-   <property name="value">
-    <number>24</number>
+   <property name="resizeMode">
+    <enum>QQuickWidget::SizeRootObjectToView</enum>
    </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QQuickWidget</class>
+   <extends>QWidget</extends>
+   <header>QtQuickWidgets/QQuickWidget</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

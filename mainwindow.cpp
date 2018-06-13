@@ -42,18 +42,8 @@ void MainWindow::activated(QSystemTrayIcon::ActivationReason reason)
 
 void MainWindow::on_pushButton_clicked()
 {
-    int flag;
-    flag = 0;
-    if ( !flag ) {
-        //没有游戏记录
-        Select_pet *sp = new Select_pet(this);
-        sp->show();
-    }
-    else {
-        //有游戏记录
-        pet_main *pm = new pet_main(this);
-        pm->show();
-    }
+     game *gm = new game();
+     gm->show();
 }
 
 void MainWindow::on_pushButton_2_clicked()

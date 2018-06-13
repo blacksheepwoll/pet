@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QSystemTrayIcon>
+#include "game.h"
 
 namespace Ui {
 class MainWindow;

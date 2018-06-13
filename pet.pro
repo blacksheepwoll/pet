@@ -29,14 +29,18 @@ SOURCES += \
     data.cpp \
     rule.cpp \
     select_pet.cpp \
-    pet_main.cpp
+    pet_main.cpp \
+    attribute.cpp \
+    game.cpp
 
 HEADERS += \
         mainwindow.h \
     data.h \
     rule.h \
     select_pet.h \
-    pet_main.h
+    pet_main.h \
+    attribute.h \
+    game.h
 
 FORMS += \
         mainwindow.ui \
@@ -46,3 +50,15 @@ FORMS += \
 
 RESOURCES += \
     picture.qrc
+
+DISTFILES += \
+    res/angry.gif \
+    res/happy.gif \
+    res/homework.gif \
+    res/play.gif \
+    res/sleep.gif \
+    res/sport1.gif \
+    res/sport2.gif \
+    res/travel.gif \
+    res/work.gif \
+    res/ePet.ico

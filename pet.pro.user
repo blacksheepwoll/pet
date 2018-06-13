@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.3.1, 2018-06-08T17:25:12. -->
+<!-- Written by QtCreator 4.3.1, 2018-06-13T00:29:37. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -59,8 +59,8 @@
  <data>
   <variable>ProjectExplorer.Project.Target.0</variable>
   <valuemap type="QVariantMap">
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">桌面</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">桌面</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">桌面4.8</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">桌面4.8</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{70f9295b-e198-4822-b4e3-a7881b008277}</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
