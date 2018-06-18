@@ -8,10 +8,10 @@
 #include "attribute.h"
 
 
-class game: public QGraphicsView{
+class game{
 
 public:
-    game(QWidget *parent=NULL);
+    game();
     QGraphicsScene *scene;
     Attribute *health;
     Attribute *happiness;

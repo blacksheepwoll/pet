@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QSystemTrayIcon>
 #include "game.h"
 
 namespace Ui {
@@ -15,11 +14,9 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
-    QSystemTrayIcon *myTrayIcon;
     ~MainWindow();
 
 private slots:
-    void activated(QSystemTrayIcon::ActivationReason reason);
 
     void on_pushButton_clicked();
 

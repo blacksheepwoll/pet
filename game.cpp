@@ -1,10 +1,10 @@
 ﻿#include "game.h"
 
-game::game(QWidget *parent){
+game::game(){
 
-    scene = new QGraphicsScene();
+    /*scene = new QGraphicsScene();
     scene->setSceneRect(0,0,800,600);
-
+    this->
     setScene(scene);
     setFixedSize(800,600);
     health = new Attribute();
@@ -19,7 +19,7 @@ game::game(QWidget *parent){
     hungry = new Attribute();
     hungry->set("饥饿值:",50);
     hungry->setPos(hungry->x(),hungry->y()+70);
-    scene->addItem(hungry);
+    scene->addItem(hungry);*/
 
 
     //show();

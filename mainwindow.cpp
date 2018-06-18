@@ -4,6 +4,9 @@
 #include "rule.h"
 #include "pet_main.h"
 #include "select_pet.h"
+#include <QPalette>
+#include <QFont>
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -13,13 +16,25 @@ MainWindow::MainWindow(QWidget *parent) :
     QTextCodec::setCodecForCStrings((QTextCodec::codecForName("GB2312")));
     QTextCodec::setCodecForTr(QTextCodec::codecForName("GB2312"));
 
-    QIcon systemIcon(":/qt-logo.png");
-    myTrayIcon = new QSystemTrayIcon(systemIcon,this);
-    myTrayIcon->show();
-    myTrayIcon->showMessage("提示","单击隐藏，双击显示主窗口");
-    //myTrayIcon->setContextMenu(ui->);
-    connect(myTrayIcon,SIGNAL(activated(QSystemTrayIcon::ActivationReason)),this,SLOT(activated(QSystemTrayIcon::ActivationReason)));
-    ui->setupUi(this);
+     ui->setupUi(this);
+    //设置背景图片
+    this->setAutoFillBackground(true);
+    QPalette palette = this->palette();
+    palette.setBrush(QPalette::Window,
+            QBrush(QPixmap("F:/bg.jpg").scaled(// 缩放背景图.
+                this->size(),
+                Qt::IgnoreAspectRatio,
+                Qt::SmoothTransformation)));             // 使用平滑的缩放方式
+    this->setPalette(palette);                           // 给widget加上背景图
+
+    //设置标题字体大小
+    QFont ft( "Microsoft YaHei", 40, 40);
+    ui->label->setFont(ft);
+
+    //设置标题字体颜色
+    QPalette pa;
+    pa.setColor(QPalette::WindowText,Qt::black);
+    ui->label->setPalette(pa);
 }
 
 MainWindow::~MainWindow()
@@ -27,23 +42,13 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::activated(QSystemTrayIcon::ActivationReason reason)
-{
-    switch (reason) {
-        case QSystemTrayIcon::Trigger:
-            this->hide();
-            break;
-        case QSystemTrayIcon::DoubleClick:
-            this->showNormal();
-            break;
-       default:break;
-    }
-}
+
 
 void MainWindow::on_pushButton_clicked()
 {
-     game *gm = new game();
-     gm->show();
+     hide();
+     pet_main *pm = new pet_main(this);
+     pm->show();
 }
 
 void MainWindow::on_pushButton_2_clicked()
